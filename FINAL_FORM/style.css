@@ -34,6 +34,13 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(61,61,69,0.227626084
 
 .contact form{
   margin:1rem auto;
+  max-width: 70rem;
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  padding:2rem;
+}
+.details .input-box .container{
+  margin:1rem auto;
   max-width: 60rem;
   border-radius: .5rem;
   box-shadow: var(--box-shadow);
@@ -152,6 +159,9 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(61,61,69,0.227626084
   text-decoration: none;
 }
 
+
+
+
 /* * {
   margin: 0;
   padding-top: 0;
@@ -223,6 +233,66 @@ body {
 .user-details .input-box-edu input:valid{
     border-color:var(--primary-color);
 } */
+
+.details .form-control {
+  padding:1rem 0.5rem;
+  width:80%;
+  background: none;
+  color:var(--black);
+  font-size: 1.3rem;
+  text-transform: none;
+  margin:.7rem 0;
+  box-shadow: var(--box-shadow);
+  border-radius: .5rem;
+
+}
+
+
+
+
+
+
+[data-role="dynamic-fields"] > .form-inline + .form-inline {
+    margin-top: 0.5em;
+    
+}
+
+[data-role="dynamic-fields"] > .form-inline [data-role="add"] {
+    display: none;
+}
+
+[data-role="dynamic-fields"] > .form-inline:last-child [data-role="add"] {
+    display: inline-block;
+}
+
+[data-role="dynamic-fields"] > .form-inline:last-child [data-role="remove"] {
+    display: none;
+}
+
+.loc1 .stateSelect {
+  padding:1rem 1.5rem;
+  width:70%;
+  background: none;
+  color:var(--black);
+  font-size: 1.6rem;
+  text-transform: none;
+  margin:.7rem 0;
+  box-shadow: var(--box-big-shadow);
+  border-radius: .5rem;
+}
+
+.loc2 .citySelect {
+  padding:1rem 1.5rem;
+  width:70%;
+  background: none;
+  color:var(--black);
+  font-size: 1.6rem;
+  text-transform: none;
+  margin:.7rem 0;
+  box-shadow: var(--box-big-shadow);
+  border-radius: .5rem;
+}
+
 
 .btn-small{
   margin-top: 1rem;

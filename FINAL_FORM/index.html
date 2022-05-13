@@ -1,31 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - final_easume_project</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  
+  
+  
+  
+ <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <!-- <script src="{% static 'js/profile-details.js' %}"></script> -->
     <script>
-        var loadFile = function (event) {
-            var image = document.getElementById('output');
-            image.src = URL.createObjectURL(event.target.files[0]);
-            image.style.width="170px"
-            image.style.height="170px";
-            image.style.display="block"
-            image.style.borderRadius="50%"
-        };
-        
-        $(document).ready(function () {
+                $(document).ready(function () {
             var max_fields = 10; //maximum input boxes allowed
-            var wrapper = $(".input_fields_wrap"); //Fields wrapper
-            var add_button = $(".add_field_button"); //Add button ID
+            var wrapper = $(".input_fields_wrap8"); //Fields wrapper
+            var add_button = $(".add_field_button8"); //Add button ID
         
             var x = 1; //initlal text box count
             $(add_button).click(function (e) { //on add input button click
@@ -40,68 +44,113 @@
                 e.preventDefault(); $(this).parent('div').remove(); x--;
             })
         });
-        
+
         $(document).ready(function () {
             var max_fields = 10; //maximum input boxes allowed
             var wrapper = $(".input_fields_wrap2"); //Fields wrapper
             var add_button = $(".add_field_button2"); //Add button ID
-        
+
             var x = 1; //initlal text box count
             $(add_button).click(function (e) { //on add input button click
                 e.preventDefault();
                 if (x < max_fields) { //max input box allowed
                     x++; //text box increment
-                    $(wrapper).append('<div><input type="text" class="box" name="hobby"/><a href="#" class="remove_field">&nbsp;&nbsp;&nbsp;&nbsp;Remove&nbsp;&nbsp;</a></div>'); //add input box
+                    $(wrapper).append('<div><input type="text" class="box" name="mytext[]"/><a href="#" class="remove_field">&nbsp;&nbsp;&nbsp;&nbsp;Remove&nbsp;&nbsp;</a></div>'); //add input box
                 }
             });
-        
+
             $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
                 e.preventDefault(); $(this).parent('div').remove(); x--;
             })
         });
-        
-        
+
+
         $(document).ready(function () {
             var max_fields = 10; //maximum input boxes allowed
             var wrapper = $(".input_fields_wrap3"); //Fields wrapper
             var add_button = $(".add_field_button3"); //Add button ID
-        
+
             var x = 1; //initlal text box count
             $(add_button).click(function (e) { //on add input button click
                 e.preventDefault();
                 if (x < max_fields) { //max input box allowed
                     x++; //text box increment
-                    $(wrapper).append('<div><input type="text" class="box" name="lang"/><a href="#" class="remove_field">&nbsp;&nbsp;&nbsp;&nbsp;Remove&nbsp;&nbsp;</a></div>'); //add input box
+                    $(wrapper).append('<div><input type="text" class="box" name="mytext[]"/><a href="#" class="remove_field">&nbsp;&nbsp;&nbsp;&nbsp;Remove&nbsp;&nbsp;</a></div>'); //add input box
                 }
             });
-        
+
             $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
                 e.preventDefault(); $(this).parent('div').remove(); x--;
             })
         });
-        
+
         $(document).ready(function () {
             var max_fields = 10; //maximum input boxes allowed
             var wrapper = $(".input_fields_wrap4"); //Fields wrapper
             var add_button = $(".add_field_button4"); //Add button ID
-        
+
             var x = 1; //initlal text box count
             $(add_button).click(function (e) { //on add input button click
                 e.preventDefault();
                 if (x < max_fields) { //max input box allowed
                     x++; //text box increment
-                    $(wrapper).append('<div><input type="text" class="box" name="social_media"/><a href="#" class="remove_field">&nbsp;&nbsp;&nbsp;&nbsp;Remove&nbsp;&nbsp;</a></div>'); //add input box
+                    $(wrapper).append('<div><input type="text" class="box" name="mytext[]"/><a href="#" class="remove_field">&nbsp;&nbsp;&nbsp;&nbsp;Remove&nbsp;&nbsp;</a></div>'); //add input box
                 }
             });
-        
+
             $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
                 e.preventDefault(); $(this).parent('div').remove(); x--;
             })
         });
+
+      
+      $(document).ready(function() {
+	var max_fields = 15;
+	var wrapper = $(".input_fields_wrap");
+	var add_button = $(".add_field_button");
+	var x = 1; //initlal text box count
+	$(add_button).click(function(e){
+	e.preventDefault();
+	if(x < max_fields){ 
+	x++;
+	$(wrapper).append('<input type="text" class="box-small" id="work_exp_org" name="work_exp_org" maxlength="40"placeholder="Organization"><input type="text" class="box-small" id="work_exp_role" name="work_exp_role" maxlength="4"placeholder="Role"></div><br><div class="input-box">&nbsp;&nbsp;<span class="details_edu">Start Date </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="details_edu">End Date </span> <br><input type="date" class="box" id="work_exp_sdate" name="work_exp_sdate" maxlength="4"placeholder="Start Date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" class="box" id="work_exp_edate" name="work_exp_edate" maxlength="4"placeholder="Start Date"></div>class="remove_field btn btn-info">Remove</div></div>');
+	}
+	});
+	$(wrapper).on("click",".remove_field", function(e){ 
+	e.preventDefault(); $(this).parent('div').remove(); x--;
+	})
+});
+      
+      
+      
+      
     </script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
   
   
   
+  
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
   
   
   
@@ -847,6 +896,42 @@ document.getElementById("citySelect").selectedIndex = 0;
   
   
   
+  <script>
+  
+  $(function() {
+    // Remove button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields-2"] > .form-inline-2 [data-role="remove"]',
+        function(e) {
+            e.preventDefault();
+            $(this).closest('.form-inline-2').remove();
+        }
+    );
+    // Add button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields-2"] > .form-inline-2 [data-role="add"]',
+        function(e) {
+            e.preventDefault();
+            var container = $(this).closest('[data-role="dynamic-fields-2"]');
+            new_field_group2 = container.children().filter('.form-inline-2:first-child').clone();
+            new_field_group2.find('input').each(function(){
+                $(this).val('');
+            });
+            container.append(new_field_group2);
+        }
+    );
+});
+  
+  
+  
+  </script>
+  
+  
+  
+  
+  
   
   
 </head>
@@ -984,6 +1069,159 @@ document.getElementById("citySelect").selectedIndex = 0;
                   
                   
                   
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <br></br>
+              
+    <br><span class = "details">
+              <div>Education Details</div>
+                <div class="input-box">
+                    
+                  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div data-role="dynamic-fields">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="field-name">/label>
+                        <input type="text" class="form-control" id="field-name" placeholder="Qualification">    
+                          
+                          
+
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                    </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="field-value">Field Value</label>
+                        <select class="form-control">
+                                                                                                                     
+ <option value="" disabled selected>Qualification
+                          </option>                       
+<option value = "High School"> High School
+</option>
+<option value = "Bachelors"> Bachelors
+</option>
+<option value = "Masters"> Masters
+</option>
+
+                        </select>
+                        
+                        
+                        
+                      </div>
+                    <span>-</span>
+                    <div class="form-group">
+                        <label class="sr-only" for="field-value">Field Value</label>
+                        <input type="text" class="form-control" id="field-value" placeholder="Institution">
+                      </div><span>-</span>
+                      <div class="form-group">
+                        <label class="sr-only" for="field-value">Field Value</label>
+                        <input type="text" class="form-control" id="field-value" placeholder="Grade">
+                  </div>
+                      <div></div>
+                  
+                    
+                    <button class="btn btn-danger" data-role="remove">
+                        Remove
+                    </button>
+                    <button class="btn btn-primary" data-role="add">
+                       Add
+                    </button>
+                </div>  <!-- /div.form-inline -->
+            </div>  <!-- /div[data-role="dynamic-fields"] -->
+        </div>  <!-- /div.col-md-12 -->
+    </div>  <!-- /div.row -->
+                  </div></div>          
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+             
+              
+              
+              
+              
+              
+                  
+        
+                <br><span class = "details">
+              <div>Work Experience</div>
+                <div class="input-box">
+                    
+                  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div data-role="dynamic-fields">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="field-name">Field Name</label>
+                        <input type="text" class="form-control" id="field-name" placeholder="Organisation">
+                    </div>
+                    <span>-</span>
+                    <div class="form-group">
+                        <label class="sr-only" for="field-value">Field Value</label>
+                        <input type="text" class="form-control" id="field-value" placeholder="Role">
+                  </div><div></div>
+                  <span>Start Date:</span>
+                    <div class="form-group">
+                        <label class="sr-only" for="field-value">Field Value 2</label>
+                        <input type="date" class="form-control" id="field-value" placeholder="Start Date" onfocus (this.type='date')">
+                    </div>
+                  <span>End Date:</span>
+                    <div class="form-group">
+                        <label class="sr-only" for="field-value">Field Value 3</label>
+                       <input type="date" class="form-control" id="field-value" placeholder="End Date" onfocus(this.type='date')">
+                    </div>
+                    <button class="btn btn-danger" data-role="remove">
+                        Remove
+                    </button>
+                    <button class="btn btn-primary" data-role="add">
+                       Add
+                    </button>
+                </div>  <!-- /div.form-inline -->
+            </div>  <!-- /div[data-role="dynamic-fields"] -->
+        </div>  <!-- /div.col-md-12 -->
+    </div>  <!-- /div.row -->
+                  </div></div>
+                  
+                  
+                  
+                  
+                  
                   
                   
                   
@@ -999,68 +1237,13 @@ document.getElementById("citySelect").selectedIndex = 0;
                     <!-- <span class="details">Pincode </span> <br> -->
                     
                 <br>
-                <div class="input-box">
-                    &nbsp;&nbsp;<span class="details"> Education Qualifications </span> <br>
-                </div>
-                <br>
-                <div class="input-box-edu">
-                    &nbsp;&nbsp;<span class="details_edu">Higher Education </span> <br>
-                    <input type="text" class="box-big" id="high_edu" name="high_edu" maxlength="40"
-                        placeholder="Institution">
-                    <input type="text" class="box-small" id="high_edu_per" name="high_edu_grade" maxlength="4"
-                        placeholder="Percentage">
-                </div>
-                <br>
-                <div class="input-box-edu">
-                    &nbsp;&nbsp;<span class="details_edu">Graduation </span> <br>
-                    <input type="text" class="box-big" id="graduation" name="graduation" maxlength="40"
-                        placeholder="Institution">
-                    <input type="text" class="box-small" id="graduation_per" name="graduation_grade" maxlength="4"
-                        placeholder="Percentage">
-                </div>
-                <br>
-                <div class="input-box-edu">
-                    &nbsp;&nbsp;<span class="details_edu">Masters</span> <br>
-                    <input type="text" class="box-big" id="masters" name="masters" maxlength="40"
-                        placeholder="Institution">
-                    <input type="text" class="box-small" id="masters_per" name="masters_grade" maxlength="4"
-                        placeholder="Percentage">
-                </div>
-                <br>
-                <div class="input-box">
-                    &nbsp;&nbsp;<span class="details">Work Experience </span> <br>
-                    <input type="text" class="box" id="work_exp_org" name="w_institution" maxlength="40"
-                        placeholder="Organization">
-                    <input type="text" class="box" id="work_exp_role" name="w_role" maxlength="10" placeholder="Role">
-                </div>
-                <br>
-                <div class="input-box">
-                    &nbsp;&nbsp;<span class="details_edu">Start Date </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                    <span class="details_edu">End Date </span> <br>
-
-                    <input type="date" class="box" id="work_exp_sdate" name="start_date" maxlength="4"
-                        placeholder="Start Date">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-                    <input type="date" class="box" id="work_exp_edate" name="end_date" maxlength="4"
-                        placeholder="Start Date">
-                </div>
+                
                 <br>
                 <div class="input-box">
                     &nbsp;&nbsp;<span class="details">Skills</span> <br>
                     <input type="text" class="box" id="skills" name="skill">
                 </div>
-                <div class="input_fields_wrap"><button class="add_field_button">Add</button>
+                <div class="input_fields_wrap8"><button class="add_field_button8">Add</button>
                     <div><input type="text" name="skills[]"></div>
                 </div>
                 <br>
@@ -1116,3 +1299,8 @@ document.getElementById("citySelect").selectedIndex = 0;
                 });
                 alert(values);
             }); -->
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
